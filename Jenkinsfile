@@ -10,7 +10,9 @@ node
     {
         sh "${mavenHome}/bin/mvn clean package"
     }
-    stage('ExecuteSonarQube')
+
+   /*
+   stage('ExecuteSonarQube')
     {
         sh "${mavenHome}/bin/mvn sonar:sonar"
     }
@@ -34,4 +36,6 @@ Regards,
 Manikanta G,
 9441523409.''', cc: 'gummidipudim@gmail.com', from: '', replyTo: '', subject: 'Build ver', to: 'info.manig167@gmail.com'
     }
+*/
 }
+
