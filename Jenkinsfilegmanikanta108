@@ -1,7 +1,7 @@
 node
 {
    def mavenHome = tool name: "maven3.6.2"
-   
+   properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), pipelineTriggers([pollSCM('* * * * *')])])
     stage('CheckoutCode')
     {
         git branch: 'development', credentialsId: 'b072cfd8-f82f-4af0-993f-38520fc83eb7', url: 'https://github.com/manikanta-ec-app/maven-web-application.git'
